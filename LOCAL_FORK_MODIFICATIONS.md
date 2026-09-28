@@ -283,6 +283,11 @@ Required behavior:
 - Release builds retain `/FS`, embedded debug information, bounded parallelism,
   pagefile expansion, resource diagnostics, split caches, and Telegram upload.
 - Cached prepare patch scripts are normalized before use and before cache save.
+- The msys64 package list requests `diffutils`, not
+  `mingw-w64-x86_64-diffutils`: MSYS2 ships diffutils only in the `msys`
+  repository, and the mingw-w64 name resolves to no package at all, so the
+  msys64 stage dies with `error: target not found` whenever its cache entry is
+  missing (a stale-but-present entry hides the problem).
 - A push to `dev` currently creates a real release and sends it to Telegram.
 - Release artifacts are named
   `Mizugram-{platform}-{arch}-{qt}-{Release|Debug}-{version}`, the version
