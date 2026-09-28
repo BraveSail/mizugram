@@ -9,12 +9,12 @@ locations may move when upstream refactors code.
 - **Upstream is now `telegramdesktop/tdesktop` directly** (remote `upstream`);
   the previous upstream `TDesktop-x64/tdesktop` (64Gram) is kept as remote
   `64gram` for reference only.
-- Current merge: official `v7.2.9` (`fb2e332095`) merged into `dev` as
-  `ac4d08eae2`.
+- Current merge: official `v7.2.10` (`d81a5ac270`) merged into `dev` as
+  `69128a24cf`.
 - The fork was renamed to **Mizugram**: `AppName` is "Mizugram Desktop",
   `AppFile` is "Mizugram", the GitHub repo is `BraveSail/mizugram`, and CI
   publishes GitHub releases tagged `mizugram-v*`. It follows the upstream
-  version string (`7.2.9`). `UpstreamVersion` in `core/version.h` tracks the
+  version string (`7.2.10`). `UpstreamVersion` in `core/version.h` tracks the
   upstream release the tree is based on.
 - The application id is `io.github.bravesail.Mizugram`: `lib/xdg/` file names,
   `Resources/qrc/telegram/telegram.qrc`, `CMakeLists.txt`,
@@ -292,8 +292,8 @@ Required behavior:
 - Release artifacts are named
   `Mizugram-{platform}-{arch}-{qt}-{Release|Debug}-{version}`, the version
   being `AppVersionStr` from `Telegram/build/version` (the same string the
-  About box shows): `Mizugram-Windows-x64-Qt6-Release-7.2.9.7z` for the release
-  archive, `Mizugram-Windows-x64-Qt6-Debug-7.2.9` for the debug upload.
+  About box shows): `Mizugram-Windows-x64-Qt6-Release-7.2.10.7z` for the release
+  archive, `Mizugram-Windows-x64-Qt6-Debug-7.2.10` for the debug upload.
 - `windows-release.yml` configures with `-D DESKTOP_APP_BUILD_PACKER=ON`, a
   fork-local option that adds the `Packer` and `test_update_verify` targets
   without switching on the whole `DESKTOP_APP_SPECIAL_TARGET` (which would also
